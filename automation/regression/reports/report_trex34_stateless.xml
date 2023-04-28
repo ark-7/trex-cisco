@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="2" errors="1" failures="0" skip="0"><testcase classname="stateless_tests.stl_general_test.STLBasic_Test" name="test_connectivity" time="0.467"><system-out><![CDATA[
+Starting TRex... done. (0s)
+Started TRex
+Connecting.
+Connected
+Mapping ports.
+Got ports mapping: {'map': {0: 1, 1: 0}, 'bi': [(0, 1)], 'unknown': []}
+]]></system-out></testcase><testcase classname="stateless_tests.stl_rx_test.STLRX_Test" name="test_1_stream_many_iterations" time="1.462"><error type="trex.common.trex_exceptions.TRexError" message="RX pkts mismatch - got: 0, expected: 1000"><![CDATA[Traceback (most recent call last):
+  File "/usr/cisco/depot/python3/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/cisco/depot/python3/lib/python3.6/unittest/case.py", line 605, in run
+    testMethod()
+  File "/auto/srg-sce-swinfra-usr/emb/users/hhaim/work/depot/asr1k/emb/private/hhaim/bp_sim_git/trex-core/scripts/automation/regression/stateless_tests/stl_rx_test.py", line 232, in wrapped
+    func(self, *args, **kwargs)
+  File "/auto/srg-sce-swinfra-usr/emb/users/hhaim/work/depot/asr1k/emb/private/hhaim/bp_sim_git/trex-core/scripts/automation/regression/stateless_tests/stl_rx_test.py", line 666, in test_1_stream_many_iterations
+    self.__rx_iteration( [exp] )
+  File "/auto/srg-sce-swinfra-usr/emb/users/hhaim/work/depot/asr1k/emb/private/hhaim/bp_sim_git/trex-core/scripts/automation/regression/stateless_tests/stl_rx_test.py", line 409, in __rx_iteration
+    self.__verify_flow(exp['pg_id'], exp['total_pkts'], exp['pkt_len'], pkt_type, stats, xstats)
+  File "/auto/srg-sce-swinfra-usr/emb/users/hhaim/work/depot/asr1k/emb/private/hhaim/bp_sim_git/trex-core/scripts/automation/regression/stateless_tests/stl_rx_test.py", line 364, in __verify_flow
+    , pkt_len, pkt_type)
+  File "/auto/srg-sce-swinfra-usr/emb/users/hhaim/work/depot/asr1k/emb/private/hhaim/bp_sim_git/trex-core/scripts/automation/regression/stateless_tests/stl_rx_test.py", line 313, in __exit_with_error
+    raise STLError(err)
+trex.common.trex_exceptions.TRexError: RX pkts mismatch - got: 0, expected: 1000
+]]></error><system-out><![CDATA[
+num cores 15 num 9k mbufs 10000 num 4k mbufs 10000
+
+injecting 1000 packets on port 0
+Stream: Latency, with field engine of random packet size
+Iteration 1
+Total TX packets: 1000, total RX: 0 diff: 1000
+{'rx_bps': {0: 0.0, 1: 0.0, 'total': 0.0},
+ 'rx_bps_l1': {0: 0.0, 1: 0.0, 'total': 0.0},
+ 'rx_bytes': {0: 0, 1: 0, 'total': 0},
+ 'rx_pkts': {0: 0, 1: 0, 'total': 0},
+ 'rx_pps': {0: 0.0, 1: 0.0, 'total': 0.0},
+ 'tx_bps': {0: 0.0, 1: 0.0, 'total': 0.0},
+ 'tx_bps_l1': {0: 0.0, 1: 0.0, 'total': 0.0},
+ 'tx_bytes': {0: 793977, 1: 0, 'total': 793977},
+ 'tx_pkts': {0: 1000, 1: 0, 'total': 1000},
+ 'tx_pps': {0: 0.0, 1: 0.0, 'total': 0.0}}
+OrderedDict([('rx_good_packets', 1000),
+             ('tx_good_packets', 0),
+             ('rx_good_bytes', 789977),
+             ('tx_good_bytes', 0),
+             ('rx_missed_errors', 0),
+             ('rx_errors', 0),
+             ('tx_errors', 0),
+             ('rx_mbuf_allocation_errors', 0),
+             ('rx_q0_packets', 0),
+             ('rx_q0_bytes', 0),
+             ('rx_q0_errors', 0),
+             ('rx_q1_packets', 0),
+             ('rx_q1_bytes', 0),
+             ('rx_q1_errors', 0),
+             ('tx_q0_packets', 0),
+             ('tx_q0_bytes', 0),
+             ('tx_q1_packets', 0),
+             ('tx_q1_bytes', 0),
+             ('tx_q2_packets', 0),
+             ('tx_q2_bytes', 0),
+             ('tx_q3_packets', 0),
+             ('tx_q3_bytes', 0),
+             ('tx_q4_packets', 0),
+             ('tx_q4_bytes', 0),
+             ('tx_q5_packets', 0),
+             ('tx_q5_bytes', 0),
+             ('tx_q6_packets', 0),
+             ('tx_q6_bytes', 0),
+             ('tx_q7_packets', 0),
+             ('tx_q7_bytes', 0),
+             ('tx_q8_packets', 0),
+             ('tx_q8_bytes', 0),
+             ('tx_q9_packets', 0),
+             ('tx_q9_bytes', 0),
+             ('tx_q10_packets', 0),
+             ('tx_q10_bytes', 0),
+             ('tx_q11_packets', 0),
+             ('tx_q11_bytes', 0),
+             ('tx_q12_packets', 0),
+             ('tx_q12_bytes', 0),
+             ('tx_q13_packets', 0),
+             ('tx_q13_bytes', 0),
+             ('tx_q14_packets', 0),
+             ('tx_q14_bytes', 0),
+             ('tx_q15_packets', 0),
+             ('tx_q15_bytes', 0),
+             ('rx_unicast_packets', 1000),
+             ('rx_multicast_packets', 0),
+             ('rx_broadcast_packets', 0),
+             ('rx_dropped_packets', 0),
+             ('rx_unknown_protocol_packets', 1000),
+             ('tx_unicast_packets', 0),
+             ('tx_multicast_packets', 0),
+             ('tx_broadcast_packets', 0),
+             ('tx_dropped_packets', 0),
+             ('tx_link_down_dropped', 0),
+             ('rx_crc_errors', 0),
+             ('rx_illegal_byte_errors', 0),
+             ('rx_error_bytes', 0),
+             ('mac_local_errors', 0),
+             ('mac_remote_errors', 0),
+             ('rx_len_errors', 0),
+             ('tx_xon_packets', 0),
+             ('rx_xon_packets', 0),
+             ('tx_xoff_packets', 0),
+             ('rx_xoff_packets', 0),
+             ('rx_size_64_packets', 0),
+             ('rx_size_65_to_127_packets', 22),
+             ('rx_size_128_to_255_packets', 97),
+             ('rx_size_256_to_511_packets', 196),
+             ('rx_size_512_to_1023_packets', 346),
+             ('rx_size_1024_to_1522_packets', 339),
+             ('rx_size_1523_to_max_packets', 0),
+             ('rx_undersized_errors', 0),
+             ('rx_oversize_errors', 0),
+             ('rx_mac_short_pkt_dropped', 0),
+             ('rx_fragmented_errors', 0),
+             ('rx_jabber_errors', 0),
+             ('tx_size_64_packets', 0),
+             ('tx_size_65_to_127_packets', 0),
+             ('tx_size_128_to_255_packets', 0),
+             ('tx_size_256_to_511_packets', 0),
+             ('tx_size_512_to_1023_packets', 0),
+             ('tx_size_1024_to_1522_packets', 0),
+             ('tx_size_1523_to_max_packets', 0)])
+Try 1 failed. Giving up
+]]></system-out></testcase></testsuite>
